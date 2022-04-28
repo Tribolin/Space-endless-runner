@@ -4,8 +4,8 @@ using UnityEngine;
 public class Module : MonoBehaviour
 {
  
-    public GameObject EmptySpawnZone;
-    public GameObject EmptySpawnPlace;
+    //public GameObject EmptySpawnZone;
+    //public GameObject EmptySpawnPlace;
     public float MoveSpeed = 1f;
     public GameObject Parent;
     public BoxCollider Box;
@@ -45,12 +45,12 @@ public class Module : MonoBehaviour
         {
             //Debug.Log("Instantiiere Modul-Zone: " + Parent.name);
 
-            var zoneObject = Instantiate(EmptySpawnZone, new Vector3(positionX, zOffset, Parent.transform.position.z + positionY), Quaternion.identity, Parent.transform);
-            Zone zone = new Zone(zoneObject, positionX, Parent.transform.position.z + positionY, width, height, false,Parent.transform);
+            //var zoneObject = Instantiate(EmptySpawnZone, new Vector3(positionX, zOffset, Parent.transform.position.z + positionY), Quaternion.identity, Parent.transform);
+            Zone zone = new Zone(positionX, Parent.transform.position.z + positionY, width, height, false,Parent.transform);
             zones.Add(zone);
 
-            var placeholderObject = Instantiate(EmptySpawnPlace, new Vector3(positionX, zOffset, Parent.transform.position.z + positionY + height), Quaternion.identity, Parent.transform);
-            Zone zoneplaceholder = new Zone(placeholderObject, positionX, Parent.transform.position.z + positionY + height, width, placHeight, true,Parent.transform);
+            ///var placeholderObject = Instantiate(EmptySpawnPlace, new Vector3(positionX, zOffset, Parent.transform.position.z + positionY + height), Quaternion.identity, Parent.transform);
+            Zone zoneplaceholder = new Zone( positionX, Parent.transform.position.z + positionY + height, width, placHeight, true,Parent.transform);
             zones.Add(zoneplaceholder);
 
             positionY += placHeight + height;

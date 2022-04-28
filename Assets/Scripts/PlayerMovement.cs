@@ -112,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
             SlowMo = true;
             Destroy(other.gameObject);
         }
+        GameObject.Find("Canvas").GetComponent<PowerUpCount>().DisplayPowerUpCount();
 
         //Death Collisions (Extra Live Powerup)
         if (other.gameObject.tag == "obstacle")

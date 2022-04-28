@@ -36,7 +36,7 @@ public class Management : MonoBehaviour
         queueTime.Enqueue(TimeIncrease);
         queueTime.Enqueue(TimeIncrease);
         queue.Enqueue(InitialState[0]);
-
+        Debug.Log("Initiate");
         for (int i = 1; i < InitialState.Length; i++)
         {
             queue.Enqueue(InitialState[i]);
@@ -59,9 +59,10 @@ public class Management : MonoBehaviour
     {
         if (player.SlowMo)
         {
+            PowerTime += Time.deltaTime;
             float divider = 10;
 
-            PowerTime += Time.deltaTime;
+
             TSpeed = Mathf.Pow(TimeIncrease, 0.2f) / divider;
             player.Speed = Walkspeed / divider;
             player.Gravity = gravityPU / divider;
@@ -70,12 +71,15 @@ public class Management : MonoBehaviour
             {
                 PowerTime = 0f;
                 player.SlowMo = false;
+                GameObject.Find("Canvas").GetComponent<PowerUpCount>().DisplayPowerUpCount();
                 player.Speed = Walkspeed;
                 player.Gravity = gravityPU;
                 TSpeed = Mathf.Pow(TimeIncrease, 0.2f);
             }
         }
     }
+
+
 
     public void SpawnModule()
     {
@@ -106,6 +110,7 @@ public class Management : MonoBehaviour
 
         queue.Enqueue(instance);
         Iterations += 1;
+        GameObject.Find("Canvas").GetComponent<PowerUpCount>().DisplayPointScore();
     }
 
     public void DestroyLastModule()

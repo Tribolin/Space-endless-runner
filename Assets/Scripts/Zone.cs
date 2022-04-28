@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Zone : MonoBehaviour
 {
-    public GameObject GameObject { get; }
+   
     public bool IsPlaceholder { get; }
     public float StartX { get; }
     public float StartY { get; }
@@ -16,10 +16,8 @@ public class Zone : MonoBehaviour
     const float MIN_SPAWN_HEIGHT = 0f;
     const float DEFAULT_SPAWN_HEIGHT = 1f;
 
-    public Zone(GameObject gameObject, float startX, float startY, float width, float height, bool isplaceholder, Transform parent)
+    public Zone( float startX, float startY, float width, float height, bool isplaceholder, Transform parent)
     {
-        GameObject = gameObject;
-
         StartX = startX;
         StartY = startY;
         Width = width;
@@ -31,7 +29,8 @@ public class Zone : MonoBehaviour
         if (!isplaceholder)
         {
             int obstacleBudget = manager.Obstacles.Length;
-            while(obstacleBudget > 0)
+            Debug.Log("Obstacle count: " + manager.Obstacles.Length);
+            while (obstacleBudget > 0)
             {
                 var price = SpawnObstacle(obstacleBudget, parent);
                 obstacleBudget -= price;
@@ -48,20 +47,21 @@ public class Zone : MonoBehaviour
 
     private int SpawnObstacle(int budget, Transform Parent)
     {
+        Debug.Log("SpawnObstacle");
         //Obstacles Spawn
         var obstacleIndex = Random.Range(0, budget);
 
         var hasRandomVerticalPosition = obstacleIndex >= 4; // Element 4 and 5 can spawn in the air
 
         float x = Random.Range(StartX, StartX + Width);
-        float y = hasRandomVerticalPosition ? DEFAULT_SPAWN_HEIGHT : Random.Range(MIN_SPAWN_HEIGHT, MAX_SPAWN_HEIGHT);
+        float y = hasRandomVerticalPosition ? Random.Range(MIN_SPAWN_HEIGHT, MAX_SPAWN_HEIGHT) : DEFAULT_SPAWN_HEIGHT;
         float z = Random.Range(StartY, StartY + Height);
 
         Vector3 spawnPosition = new Vector3(x, y, z);
         var child = Instantiate(manager.Obstacles[obstacleIndex], spawnPosition, Quaternion.identity);
         child.transform.SetParent(Parent);
 
-        return obstacleIndex;
+        return obstacleIndex +1;
     }
 
     private void SpawnPowerUp(Transform parent)
