@@ -10,15 +10,14 @@ public class PowerUpCount : MonoBehaviour
     public float Timer = 0;
 
     PlayerMovement player;
-    Management manager;
-
-
+    GameManager gameManager;
 
     void Start()
     {
 
         player = GameObject.Find("Player").GetComponent<PlayerMovement>();
-        manager = GameObject.Find("Manager").GetComponent<Management>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         DisplayPowerUpCount();
     }
 
@@ -30,6 +29,6 @@ public class PowerUpCount : MonoBehaviour
 
     public void DisplayPointScore()
     {
-        Score.text = manager.Iterations.ToString();
+        Score.text = gameManager.CurrentScore.ToString();
     }
 }

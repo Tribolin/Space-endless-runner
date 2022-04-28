@@ -12,7 +12,6 @@ public class Management : MonoBehaviour
     public float MBCSize;
     public float TSpeed = 1;
     public float TimeIncrease = 1;
-    public int Iterations = 0;
 
     Vector3 spawnpoint;
     Quaternion spawnrotation;
@@ -29,9 +28,15 @@ public class Management : MonoBehaviour
     Queue<float> queueTime = new Queue<float>();
     Queue<GameObject> queue = new Queue<GameObject>();
     PlayerMovement player;
+    GameManager gameManager;
 
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        player = GameObject.Find("Player").GetComponent<PlayerMovement>();
+
+        gameManager.CurrentScore = 0;
+
         //Enqueue Timeincrease two times
         queueTime.Enqueue(TimeIncrease);
         queueTime.Enqueue(TimeIncrease);
@@ -51,10 +56,10 @@ public class Management : MonoBehaviour
         TSpeed = Mathf.Sqrt(TimeIncrease);
 
         //Power-Ups
-        player = GameObject.Find("Player").GetComponent<PlayerMovement>();
         Walkspeed = player.Speed;
         gravityPU = player.Gravity;
     }
+
     private void Update()
     {
         if (player.SlowMo)
@@ -78,8 +83,6 @@ public class Management : MonoBehaviour
             }
         }
     }
-
-
 
     public void SpawnModule()
     {
@@ -109,7 +112,7 @@ public class Management : MonoBehaviour
         }
 
         queue.Enqueue(instance);
-        Iterations += 1;
+        gameManager.CurrentScore += 1;
         GameObject.Find("Canvas").GetComponent<PowerUpCount>().DisplayPointScore();
     }
 

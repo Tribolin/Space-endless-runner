@@ -126,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 Debug.Log("Lost");
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(0);
             }
 
         }
@@ -134,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "Death")
         {
             Debug.Log("Lost");
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
 }
