@@ -4,15 +4,14 @@ using UnityEngine;
 public class Module : MonoBehaviour
 {
  
-    public GameObject emptySpawnZone;
-    public GameObject emptySpawnPlac;
-    public float MoveSpeed = 0.1f;
+    public GameObject EmptySpawnZone;
+    public GameObject EmptySpawnPlace;
+    public float MoveSpeed = 1f;
     public GameObject Parent;
-    
-
-    Management manager;
+    public BoxCollider Box;
 
     CharacterController controller;
+    Management manager;
     List<Zone> zones = new List<Zone>();
     int zonecount = 3;
     float zonesize = 0.24f;
@@ -21,14 +20,15 @@ public class Module : MonoBehaviour
     private void Start()
     {
         controller = GetComponent<CharacterController>();
-        //InitModules();
+        manager = GameObject.Find("Manager").GetComponent<Management>();
+        
+        Box.transform.localScale = new Vector3(Box.bounds.size.x ,Box.bounds.size.y,manager.MBCSize);
     }
 
     void Update()
     {
-        
-        Vector3 movement = transform.forward * -1 * MoveSpeed ;
-        controller.Move(movement);
+        Vector3 movement = new Vector3 (0,0,-10f * Time.deltaTime * manager.TSpeed );
+        controller.Move(movement );
     }
     
     public void InitZones()
@@ -43,18 +43,17 @@ public class Module : MonoBehaviour
 
         for (int i = 0; i < zonecount; i++)
         {
-            Debug.Log("Instantiiere Modul-Zone: " + Parent.name);
+            //Debug.Log("Instantiiere Modul-Zone: " + Parent.name);
 
-            var zoneObject = Instantiate(emptySpawnZone, new Vector3(positionX, zOffset, Parent.transform.position.z + positionY), Quaternion.identity, Parent.transform);
+            var zoneObject = Instantiate(EmptySpawnZone, new Vector3(positionX, zOffset, Parent.transform.position.z + positionY), Quaternion.identity, Parent.transform);
             Zone zone = new Zone(zoneObject, positionX, Parent.transform.position.z + positionY, width, height, false,Parent.transform);
             zones.Add(zone);
 
-            var placeholderObject = Instantiate(emptySpawnPlac, new Vector3(positionX, zOffset, Parent.transform.position.z + positionY + height), Quaternion.identity, Parent.transform);
+            var placeholderObject = Instantiate(EmptySpawnPlace, new Vector3(positionX, zOffset, Parent.transform.position.z + positionY + height), Quaternion.identity, Parent.transform);
             Zone zoneplaceholder = new Zone(placeholderObject, positionX, Parent.transform.position.z + positionY + height, width, placHeight, true,Parent.transform);
             zones.Add(zoneplaceholder);
 
             positionY += placHeight + height;
         }
     }
-
 }

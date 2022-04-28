@@ -6,6 +6,9 @@ TagManager:
   tags:
   - trigger
   - obstacle
+  - PUExtra Life
+  - Death
+  - Slowmo
   layers:
   - Default
   - TransparentFX
