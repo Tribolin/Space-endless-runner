@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public int MaxELife = 2;
     public int ExtraLifes = 0;
     public bool SlowMo = false;
+    public bool TempoReset = false;
 
     public float WallDistance = 0.1f;
     public float GroundDistance = 0.1f;
@@ -111,6 +112,10 @@ public class PlayerMovement : MonoBehaviour
         {
             SlowMo = true;
             Destroy(other.gameObject);
+        }
+        if(other.gameObject.tag == "Tempo-Reset")
+        {
+            manager.TimeIncrease = 1;
         }
         GameObject.Find("Canvas").GetComponent<PowerUpCount>().DisplayPowerUpCount();
 

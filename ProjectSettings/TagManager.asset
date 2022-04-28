@@ -9,6 +9,7 @@ TagManager:
   - PUExtra Life
   - Death
   - Slowmo
+  - Tempo-Reset
   layers:
   - Default
   - TransparentFX

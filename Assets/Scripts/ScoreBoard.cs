@@ -1,30 +1,52 @@
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class ScoreBoard : MonoBehaviour
 {
-    public List<Highscore> HighScores { get; private set; }
+    private List<Highscore> highScores;
+    private const string SETTINGS_KEY = "Highscores";
 
-    private void Awake()
-    {
-        HighScores = Load().OrderByDescending(score => score.Score).ToList();
+    public List<Highscore> HighScores 
+    { 
+        get 
+        { 
+            return highScores ?? Init();
+        } 
     }
 
-    private List<Highscore> Load()
+    private List<Highscore> Init()
     {
-        var list = new List<Highscore>()
+        var scorelist = PlayerPrefs.GetString(SETTINGS_KEY);
+        Debug.Log($"Scorelist: {scorelist}");
+
+        var list = JsonConvert.DeserializeObject<List<Highscore>>(scorelist);
+
+        if(list == null)
         {
-            new Highscore() { Name = "Silas", Score = 80 },
-            new Highscore() { Name = "Holger", Score = 35 },
-            new Highscore() { Name = "Marcel", Score = 75 }
-        };
+            list = new List<Highscore>();
+        }
 
-        return list;
+        Debug.Log($"Scorelist: {list.Count} Elemente");
+
+        highScores = list;
+        return highScores;
     }
 
-    private void Save(List<Highscore> scores)
+    public void Save()
     {
+        var scorelist = JsonConvert.SerializeObject(highScores);
 
+        Debug.Log(scorelist);
+
+        PlayerPrefs.SetString(SETTINGS_KEY, scorelist);
+        PlayerPrefs.Save();
+    }
+
+    public void UpdateScores(string name, int score, int max)
+    {
+        highScores.Add(new Highscore() { Name = name, Score = score });
+        highScores = HighScores.OrderByDescending(score => score.Score).Take(max).ToList();
     }
 }
