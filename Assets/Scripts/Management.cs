@@ -25,7 +25,7 @@ public class Management : MonoBehaviour
     const float SPEED_LIMITER_INCREMENT = 2f;
     const float POWER_UP_DURATION = 5f;
 
-    Queue<float> queueTime = new Queue<float>();
+    public Queue<float> queueTime = new Queue<float>();
     Queue<GameObject> queue = new Queue<GameObject>();
     PlayerMovement player;
     GameManager gameManager;

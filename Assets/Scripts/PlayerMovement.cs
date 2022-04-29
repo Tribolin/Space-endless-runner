@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     bool isCrouching = false;
     Vector3 velocity;
     Management manager;
+  
+    ParticleSystem system;
 
     const string KEY_CROUCH = "s";
     const string KEY_JUMP = "Jump";
@@ -37,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
     {
         manager = GameObject.Find("Manager").GetComponent<Management>();
         controller = GetComponent<CharacterController>();
+       
+        system = GameObject.Find("Particle System").GetComponent<ParticleSystem>();
+        
     }
 
     void Update()
@@ -74,11 +79,11 @@ public class PlayerMovement : MonoBehaviour
 
         // Adjust horizontal movement
         Vector3 move = transform.right * Input.GetAxis("Horizontal");
-        controller.Move(move * Speed * Time.deltaTime);
+        controller.Move(move * Speed * Time.deltaTime );
 
         // Adjust vertical movement
         velocity.y += Gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        controller.Move(velocity * Time.deltaTime );
     }
 
     //Collisions
@@ -116,17 +121,25 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.tag == "Tempo-Reset")
         {
             manager.TimeIncrease = 1;
+            foreach (var item in manager.queueTime)
+            {
+                manager.queueTime.Dequeue();
+            }
+            manager.queueTime.Enqueue(1);
+            manager.queueTime.Enqueue(1);
+            manager.TSpeed = 1; 
         }
-        GameObject.Find("Canvas").GetComponent<PowerUpCount>().DisplayPowerUpCount();
+       
 
         //Death Collisions (Extra Live Powerup)
         if (other.gameObject.tag == "obstacle")
         {
             if (ExtraLifes > 0)
             {
-                // TODO: Explode
+                
                 Destroy(other.gameObject);
                 ExtraLifes -= 1;
+                system.Play();
             }
             else
             {
@@ -135,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-
+        GameObject.Find("Canvas").GetComponent<PowerUpCount>().DisplayPowerUpCount();
         if (other.gameObject.tag == "Death")
         {
             Debug.Log("Lost");
