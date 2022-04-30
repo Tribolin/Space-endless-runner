@@ -29,6 +29,7 @@ public class Management : MonoBehaviour
     Queue<GameObject> queue = new Queue<GameObject>();
     PlayerMovement player;
     GameManager gameManager;
+    
 
     void Start()
     {

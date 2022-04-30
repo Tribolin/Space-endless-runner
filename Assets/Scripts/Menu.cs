@@ -34,7 +34,7 @@ public class Menu : MonoBehaviour
             Debug.Log("Updating highscore");
             NameInput.SetActive(true);
         }
-
+        Debug.Log("UI");
         UpdateUI();
     }
 
