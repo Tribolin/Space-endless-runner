@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 98b7ed27ec1f2134e8b0a1bac23d396c, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0b067e4a81a1f2144b06ad1ca77a268b, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -317,8 +317,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Confirm
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 268ad303984332344868da7bf525e019, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 268ad303984332344868da7bf525e019, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -452,8 +452,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Your Score:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 268ad303984332344868da7bf525e019, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 268ad303984332344868da7bf525e019, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -468,7 +468,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 81d2daf36c96c1248b885569f7e1e745, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 5f32f0d88e9e699478be691073378379, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -640,8 +640,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 268ad303984332344868da7bf525e019, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 268ad303984332344868da7bf525e019, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -656,7 +656,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 81d2daf36c96c1248b885569f7e1e745, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 5f32f0d88e9e699478be691073378379, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -775,8 +775,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 268ad303984332344868da7bf525e019, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 268ad303984332344868da7bf525e019, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1014016896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a20b8c4c7bf3f44e947ba9414cdc32c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9acae02c99adc4e4da19cefacbfaf1c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HighscoreNames: {fileID: 1167624016}
@@ -1178,8 +1178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 268ad303984332344868da7bf525e019, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 268ad303984332344868da7bf525e019, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1270,7 +1270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1222596405
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1900,8 +1900,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Enter your Name:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 268ad303984332344868da7bf525e019, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 268ad303984332344868da7bf525e019, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2035,8 +2035,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 268ad303984332344868da7bf525e019, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 268ad303984332344868da7bf525e019, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2170,8 +2170,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Highscores
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 274eea3c6fcc59145a22f8438dfdf5b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 268ad303984332344868da7bf525e019, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 268ad303984332344868da7bf525e019, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2186,7 +2186,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 81d2daf36c96c1248b885569f7e1e745, type: 2}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 5f32f0d88e9e699478be691073378379, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
