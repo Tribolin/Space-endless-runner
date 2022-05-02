@@ -17,6 +17,13 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+# Unity
+[Tt]emp/
+[Oo]bj/
+[Bb]uild
+/[Ll]ibrary/
+sysinfo.txt
+*.stackdump
 
 # Mono auto generated files
 mono_crash.*
