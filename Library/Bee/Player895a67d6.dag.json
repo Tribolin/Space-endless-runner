@@ -194,6 +194,17 @@
       "DebugActionIndex": 4
     },
     {
+      "Annotation": "CopyFiles Test Builds/Space Runner_Data/level0.resS",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/PlayerDataCache/Win64/Data/level0.resS"
+      ],
+      "Outputs": [
+        "Test Builds/Space Runner_Data/level0.resS"
+      ],
+      "DebugActionIndex": 5
+    },
+    {
       "Annotation": "CopyFiles Test Builds/Space Runner_Data/level1",
       "ActionType": "CopyFiles",
       "Inputs": [
@@ -201,17 +212,6 @@
       ],
       "Outputs": [
         "Test Builds/Space Runner_Data/level1"
-      ],
-      "DebugActionIndex": 5
-    },
-    {
-      "Annotation": "CopyFiles Test Builds/Space Runner_Data/level1.resS",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "Library/PlayerDataCache/Win64/Data/level1.resS"
-      ],
-      "Outputs": [
-        "Test Builds/Space Runner_Data/level1.resS"
       ],
       "DebugActionIndex": 6
     },

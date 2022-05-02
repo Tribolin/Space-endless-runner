@@ -709,6 +709,10 @@
       <Project>{73BA29F4-5B8D-0C1D-AF0A-331B176D9005}</Project>
       <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
+      <Project>{13707EE2-963B-C94F-377C-5507DD4E7D23}</Project>
+      <Name>Unity.TextMeshPro.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
       <Project>{5F73102D-92A5-D231-08D1-80ED1B377D27}</Project>
       <Name>Unity.VisualScripting.Flow.Player</Name>
@@ -724,10 +728,6 @@
     <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
       <Project>{59C6205A-BE9F-020C-6C58-6FCBC44DBAA8}</Project>
       <Name>Unity.VisualScripting.Core.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
-      <Project>{13707EE2-963B-C94F-377C-5507DD4E7D23}</Project>
-      <Name>Unity.TextMeshPro.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

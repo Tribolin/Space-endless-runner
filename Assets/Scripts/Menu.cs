@@ -65,7 +65,10 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
+    public void on_Quit()
+    {
+        Application.Quit();
+    }
     private (string, string) BuildHighScoreText(ScoreBoard board/*, int score*/)
     {
         stringBuilderScores.Clear();

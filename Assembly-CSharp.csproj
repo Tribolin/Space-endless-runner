@@ -762,6 +762,10 @@
       <Project>{3F074606-F32D-AD75-FEF0-589F63F69504}</Project>
       <Name>Unity.VisualScripting.Shared.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{2EB43D5F-E71B-0A9F-D2A1-A7D161A609BE}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{690C0255-0361-11B7-4273-648C4BF96B6F}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
@@ -777,6 +781,10 @@
     <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
       <Project>{56C43175-EAE6-E942-49A0-F084B59B226B}</Project>
       <Name>Unity.VisualScripting.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{24114FA0-29BC-23B2-846F-AF18A624472D}</Project>
+      <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
       <Project>{7F6CD790-AFC4-0B46-A7E8-632F9AA36D13}</Project>
@@ -813,14 +821,6 @@
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
       <Project>{176387F7-C272-6377-D880-153D7912E5DC}</Project>
       <Name>Unity.VisualScripting.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{2EB43D5F-E71B-0A9F-D2A1-A7D161A609BE}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{24114FA0-29BC-23B2-846F-AF18A624472D}</Project>
-      <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
