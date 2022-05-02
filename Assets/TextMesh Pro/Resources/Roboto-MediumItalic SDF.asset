@@ -5651,7 +5651,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Roboto-MediumItalic SDF Material
   m_Shader: {fileID: 4800000, guid: 7b0116f824511184d85c97e35dafb34f, type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - UNDERLAY_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -5714,7 +5715,7 @@ Material:
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
     - _ScaleRatioB: 0.73125
-    - _ScaleRatioC: 0.73125
+    - _ScaleRatioC: 0.4875
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -5727,9 +5728,9 @@ Material:
     - _StencilWriteMask: 255
     - _TextureHeight: 1024
     - _TextureWidth: 1024
-    - _UnderlayDilate: 0
-    - _UnderlayOffsetX: 0
-    - _UnderlayOffsetY: 0
+    - _UnderlayDilate: 0.5
+    - _UnderlayOffsetX: 1
+    - _UnderlayOffsetY: 1
     - _UnderlaySoftness: 0
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0

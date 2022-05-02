@@ -83,6 +83,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Menu
     methodName: onButtonPlay
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: on_Quit
   sceneClasses:
     Assets/Scenes/DemoScene.unity:
     - Class: 1
