@@ -12,9 +12,9 @@ public class Zone : MonoBehaviour
 
     Management manager;
 
-    const float MAX_SPAWN_HEIGHT = 4f;
-    const float MIN_SPAWN_HEIGHT = 0f;
-    const float DEFAULT_SPAWN_HEIGHT = 1f;
+
+
+    const float DEFAULT_SPAWN_HEIGHT = 0.5f;
 
     public Zone( float startX, float startY, float width, float height, bool isplaceholder, Transform parent)
     {
@@ -51,10 +51,10 @@ public class Zone : MonoBehaviour
         //Obstacles Spawn
         var obstacleIndex = Random.Range(0, budget);
 
-        var hasRandomVerticalPosition = obstacleIndex >= 4; // Element 4 and 5 can spawn in the air
+        
 
         float x = Random.Range(StartX, StartX + Width);
-        float y = hasRandomVerticalPosition ? Random.Range(MIN_SPAWN_HEIGHT, MAX_SPAWN_HEIGHT) : DEFAULT_SPAWN_HEIGHT;
+        float y =  DEFAULT_SPAWN_HEIGHT;
         float z = Random.Range(StartY, StartY + Height);
 
         Vector3 spawnPosition = new Vector3(x, y, z);

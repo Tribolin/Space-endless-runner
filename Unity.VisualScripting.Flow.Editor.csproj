@@ -83,8 +83,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Framework\Variables\Obsolete\VariableUnitOption.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Framework\Control\SelectOnEnumDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Events\EventUnitDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Framework\Nesting\NesterUnitEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Framework\InputSystemWidget.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Framework\Nesting\NesterUnitEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Framework\Nesting\SuperUnitDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Events\TriggerCustomEventDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Framework\Control\SelectOnIntegerDescriptor.cs" />
@@ -123,8 +123,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Plugin\Migrations\Migration_Asset_to_Package.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Connections\UnitConnectionStyles.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Connections\ValueConnectionWidget.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Ports\ValueInputDefinitionInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Framework\Control\SwitchOnEnumDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Ports\ValueInputDefinitionInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Framework\Codebase\CreateStructDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\Framework\Variables\UnifiedVariableUnitWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Flow\RuntimeGraphBase.cs" />

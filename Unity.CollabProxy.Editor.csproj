@@ -134,8 +134,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.15\Editor\Collaborate\Views\Adapters\ListAdapters\ToggleableChangeListAdapter.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.15\Editor\Collaborate\Common\StringArrayContainer.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.15\Editor\Collaborate\UserInterface\CollaborateWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.15\Editor\Collaborate\Presenters\HistoryPresenter.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.15\Editor\Collaborate\EditorGameService\CloudCollabServiceIdentifier.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.15\Editor\Collaborate\Presenters\HistoryPresenter.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.15\Editor\Collaborate\Models\Providers\Collab.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.15\Editor\Collaborate\Components\TabPageComponent.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.15\Editor\Collaborate\EditorGameService\CloudCollabTopMenu.cs" />
@@ -1104,6 +1104,10 @@
     <ProjectReference Include="Unity.Services.Core.Editor.csproj">
       <Project>{38AB8B5E-67C7-42D9-6C0C-2E70D3589556}</Project>
       <Name>Unity.Services.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Settings.Editor.csproj">
+      <Project>{ACEC1328-3481-320B-7154-2D05E7886767}</Project>
+      <Name>Unity.Settings.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{8D77DB8C-A453-4BA7-F41E-ABB2985B1D61}</Project>
